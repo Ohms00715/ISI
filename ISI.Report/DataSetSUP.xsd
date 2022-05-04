@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ISI.Report.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SUP1112TableAdapter" GeneratorDataComponentClassName="SUP1112TableAdapter" Name="SUP1112" UserDataComponentName="SUP1112TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Sup_ID, Sup_desc
+FROM     ISIDB.dbo.ISI_Supplier</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Sup_ID" DataSetColumn="Sup_ID" />
+              <Mapping SourceColumn="Sup_desc" DataSetColumn="Sup_desc" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Sup_ID, Sup_desc
+FROM     ISIDB.dbo.ISI_Supplier</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DefectTableAdapter" GeneratorDataComponentClassName="DefectTableAdapter" Name="Defect" UserDataComponentName="DefectTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT TOP (1000) Def_ID, Def_Desc, Def_Remark, Def_Activated, Def_created_by, Def_created_Time, Def_updated_by, Def_updated_Time
+FROM     ISIDB.dbo.ISI_Defect</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Def_ID" DataSetColumn="Def_ID" />
+              <Mapping SourceColumn="Def_Desc" DataSetColumn="Def_Desc" />
+              <Mapping SourceColumn="Def_Remark" DataSetColumn="Def_Remark" />
+              <Mapping SourceColumn="Def_Activated" DataSetColumn="Def_Activated" />
+              <Mapping SourceColumn="Def_created_by" DataSetColumn="Def_created_by" />
+              <Mapping SourceColumn="Def_created_Time" DataSetColumn="Def_created_Time" />
+              <Mapping SourceColumn="Def_updated_by" DataSetColumn="Def_updated_by" />
+              <Mapping SourceColumn="Def_updated_Time" DataSetColumn="Def_updated_Time" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="IncommingTableAdapter" GeneratorDataComponentClassName="IncommingTableAdapter" Name="Incomming" UserDataComponentName="IncommingTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT d.Doc_ID AS DocumentNo, i.Trn_Truck_Id AS TickNo, i.Trn_PO AS PO, d.Doc_Des AS PODesc, CONVERT(varchar(8), d.Doc_Date, 103) AS DocumentDate,
+                      (SELECT QC_First_Name
+                       FROM      ISI_Quality_Check AS q
+                       WHERE   (QC_ID = d.QC_Inspector)) AS QCName,
+                      (SELECT QC_First_Name
+                       FROM      ISI_Quality_Check AS q
+                       WHERE   (QC_ID = d.LG_Inspector)) AS LGName,
+                      (SELECT QC_First_Name
+                       FROM      ISI_Quality_Check AS q
+                       WHERE   (QC_ID = d.Approved_Inspector)) AS InsName
+FROM     ISIDB.dbo.ISI_Document AS d LEFT OUTER JOIN
+                  ISI_Incoming AS i ON i.Doc_ID = d.Doc_ID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DocumentNo" DataSetColumn="DocumentNo" />
+              <Mapping SourceColumn="TickNo" DataSetColumn="TickNo" />
+              <Mapping SourceColumn="PO" DataSetColumn="PO" />
+              <Mapping SourceColumn="PODesc" DataSetColumn="PODesc" />
+              <Mapping SourceColumn="DocumentDate" DataSetColumn="DocumentDate" />
+              <Mapping SourceColumn="QCName" DataSetColumn="QCName" />
+              <Mapping SourceColumn="LGName" DataSetColumn="LGName" />
+              <Mapping SourceColumn="InsName" DataSetColumn="InsName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SUP1112" msprop:Generator_TableClassName="SUP1112DataTable" msprop:Generator_TableVarName="tableSUP1112" msprop:Generator_RowChangedName="SUP1112RowChanged" msprop:Generator_TablePropName="SUP1112" msprop:Generator_RowDeletingName="SUP1112RowDeleting" msprop:Generator_RowChangingName="SUP1112RowChanging" msprop:Generator_RowEvHandlerName="SUP1112RowChangeEventHandler" msprop:Generator_RowDeletedName="SUP1112RowDeleted" msprop:Generator_RowClassName="SUP1112Row" msprop:Generator_UserTableName="SUP1112" msprop:Generator_RowEvArgName="SUP1112RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Sup_ID" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="Sup_ID" msprop:Generator_ColumnVarNameInTable="columnSup_ID" msprop:Generator_ColumnPropNameInTable="Sup_IDColumn" msprop:Generator_UserColumnName="Sup_ID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Sup_desc" msprop:nullValue="_null" msprop:Generator_ColumnPropNameInRow="Sup_desc" msprop:Generator_ColumnVarNameInTable="columnSup_desc" msprop:Generator_ColumnPropNameInTable="Sup_descColumn" msprop:Generator_UserColumnName="Sup_desc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Defect" msprop:Generator_TableClassName="DefectDataTable" msprop:Generator_TableVarName="tableDefect" msprop:Generator_TablePropName="Defect" msprop:Generator_RowDeletingName="DefectRowDeleting" msprop:Generator_RowChangingName="DefectRowChanging" msprop:Generator_RowEvHandlerName="DefectRowChangeEventHandler" msprop:Generator_RowDeletedName="DefectRowDeleted" msprop:Generator_UserTableName="Defect" msprop:Generator_RowChangedName="DefectRowChanged" msprop:Generator_RowEvArgName="DefectRowChangeEvent" msprop:Generator_RowClassName="DefectRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Def_ID" msprop:Generator_ColumnVarNameInTable="columnDef_ID" msprop:Generator_ColumnPropNameInRow="Def_ID" msprop:Generator_ColumnPropNameInTable="Def_IDColumn" msprop:Generator_UserColumnName="Def_ID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Def_Desc" msprop:Generator_ColumnVarNameInTable="columnDef_Desc" msprop:Generator_ColumnPropNameInRow="Def_Desc" msprop:Generator_ColumnPropNameInTable="Def_DescColumn" msprop:Generator_UserColumnName="Def_Desc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Def_Remark" msprop:Generator_ColumnVarNameInTable="columnDef_Remark" msprop:Generator_ColumnPropNameInRow="Def_Remark" msprop:Generator_ColumnPropNameInTable="Def_RemarkColumn" msprop:Generator_UserColumnName="Def_Remark" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Def_Activated" msprop:Generator_ColumnVarNameInTable="columnDef_Activated" msprop:Generator_ColumnPropNameInRow="Def_Activated" msprop:Generator_ColumnPropNameInTable="Def_ActivatedColumn" msprop:Generator_UserColumnName="Def_Activated" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Def_created_by" msprop:Generator_ColumnVarNameInTable="columnDef_created_by" msprop:Generator_ColumnPropNameInRow="Def_created_by" msprop:Generator_ColumnPropNameInTable="Def_created_byColumn" msprop:Generator_UserColumnName="Def_created_by" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Def_created_Time" msprop:Generator_ColumnVarNameInTable="columnDef_created_Time" msprop:Generator_ColumnPropNameInRow="Def_created_Time" msprop:Generator_ColumnPropNameInTable="Def_created_TimeColumn" msprop:Generator_UserColumnName="Def_created_Time" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Def_updated_by" msprop:Generator_ColumnVarNameInTable="columnDef_updated_by" msprop:Generator_ColumnPropNameInRow="Def_updated_by" msprop:Generator_ColumnPropNameInTable="Def_updated_byColumn" msprop:Generator_UserColumnName="Def_updated_by" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Def_updated_Time" msprop:Generator_ColumnVarNameInTable="columnDef_updated_Time" msprop:Generator_ColumnPropNameInRow="Def_updated_Time" msprop:Generator_ColumnPropNameInTable="Def_updated_TimeColumn" msprop:Generator_UserColumnName="Def_updated_Time" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Incomming" msprop:Generator_TableClassName="IncommingDataTable" msprop:Generator_TableVarName="tableIncomming" msprop:Generator_TablePropName="Incomming" msprop:Generator_RowDeletingName="IncommingRowDeleting" msprop:Generator_RowChangingName="IncommingRowChanging" msprop:Generator_RowEvHandlerName="IncommingRowChangeEventHandler" msprop:Generator_RowDeletedName="IncommingRowDeleted" msprop:Generator_UserTableName="Incomming" msprop:Generator_RowChangedName="IncommingRowChanged" msprop:Generator_RowEvArgName="IncommingRowChangeEvent" msprop:Generator_RowClassName="IncommingRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DocumentNo" msprop:Generator_ColumnVarNameInTable="columnDocumentNo" msprop:Generator_ColumnPropNameInRow="DocumentNo" msprop:Generator_ColumnPropNameInTable="DocumentNoColumn" msprop:Generator_UserColumnName="DocumentNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TickNo" msprop:Generator_ColumnVarNameInTable="columnTickNo" msprop:Generator_ColumnPropNameInRow="TickNo" msprop:Generator_ColumnPropNameInTable="TickNoColumn" msprop:Generator_UserColumnName="TickNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PO" msprop:Generator_ColumnVarNameInTable="columnPO" msprop:Generator_ColumnPropNameInRow="PO" msprop:Generator_ColumnPropNameInTable="POColumn" msprop:Generator_UserColumnName="PO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PODesc" msprop:Generator_ColumnVarNameInTable="columnPODesc" msprop:Generator_ColumnPropNameInRow="PODesc" msprop:Generator_ColumnPropNameInTable="PODescColumn" msprop:Generator_UserColumnName="PODesc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DocumentDate" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDocumentDate" msprop:Generator_ColumnPropNameInRow="DocumentDate" msprop:Generator_ColumnPropNameInTable="DocumentDateColumn" msprop:Generator_UserColumnName="DocumentDate" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QCName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnQCName" msprop:Generator_ColumnPropNameInRow="QCName" msprop:Generator_ColumnPropNameInTable="QCNameColumn" msprop:Generator_UserColumnName="QCName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LGName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLGName" msprop:Generator_ColumnPropNameInRow="LGName" msprop:Generator_ColumnPropNameInTable="LGNameColumn" msprop:Generator_UserColumnName="LGName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InsName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnInsName" msprop:Generator_ColumnPropNameInRow="InsName" msprop:Generator_ColumnPropNameInTable="InsNameColumn" msprop:Generator_UserColumnName="InsName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Defect" />
+      <xs:field xpath="mstns:Def_ID" />
+    </xs:unique>
+    <xs:unique name="Incomming_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Incomming" />
+      <xs:field xpath="mstns:DocumentNo" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

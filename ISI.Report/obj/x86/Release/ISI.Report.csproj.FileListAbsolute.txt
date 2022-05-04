@@ -1,0 +1,11 @@
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Report\bin\Release\ISI.Report.dll.config
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Report\bin\Release\ISI.Report.dll
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Report\bin\Release\ISI.Report.pdb
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Report\obj\x86\Release\ISI.Report.csprojResolveAssemblyReference.cache
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Report\obj\x86\Release\ISI.Report.DataSet12.resources
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Report\obj\x86\Release\ISI.Report.Properties.Resources.resources
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Report\obj\x86\Release\ISI.Report.csproj.GenerateResource.Cache
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Report\obj\x86\Release\RdlCompile.cache
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Report\obj\x86\Release\RdlCompile.compiled
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Report\obj\x86\Release\ISI.Report.dll
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Report\obj\x86\Release\ISI.Report.pdb

@@ -1,0 +1,6 @@
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Data\bin\Debug\ISI.Data.dll
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Data\bin\Debug\ISI.Data.pdb
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Data\obj\x86\Debug\ISI.Data.Properties.Resources.resources
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Data\obj\x86\Debug\ISI.Data.csproj.GenerateResource.Cache
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Data\obj\x86\Debug\ISI.Data.dll
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Data\obj\x86\Debug\ISI.Data.pdb

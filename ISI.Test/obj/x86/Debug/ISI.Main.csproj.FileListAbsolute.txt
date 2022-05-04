@@ -1,0 +1,17 @@
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Test\bin\Releas\ISI.Test.exe.config
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Test\bin\Debug\ISI.Test.exe.config
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Test\bin\Debug\ISI.Test.exe
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Test\bin\Debug\ISI.Test.pdb
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Test\bin\Debug\ISI.Window.dll
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Test\bin\Debug\ISI.Maneger.dll
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Test\bin\Debug\ISI.Report.dll
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Test\bin\Debug\ISI.Data.dll
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Test\bin\Debug\ISI.Window.pdb
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Test\bin\Debug\ISI.Maneger.pdb
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Test\bin\Debug\ISI.Report.pdb
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Test\bin\Debug\ISI.Data.pdb
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Test\obj\x86\Debug\ISI.Main.csprojResolveAssemblyReference.cache
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Test\obj\x86\Debug\ISI.Main.Properties.Resources.resources
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Test\obj\x86\Debug\ISI.Main.csproj.GenerateResource.Cache
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Test\obj\x86\Debug\ISI.Test.exe
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Test\obj\x86\Debug\ISI.Test.pdb

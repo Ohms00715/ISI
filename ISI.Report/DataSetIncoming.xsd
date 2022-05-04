@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet" targetNamespace="http://tempuri.org/DataSet.xsd" xmlns:mstns="http://tempuri.org/DataSet.xsd" xmlns="http://tempuri.org/DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ISI.Report.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTableISITableAdapter" GeneratorDataComponentClassName="DataTableISITableAdapter" Name="DataTableISI" UserDataComponentName="DataTableISITableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ISI_Document.Doc_ID, ISI_Document.Doc_Date, ISI_Document.QC_Inspector,
+                      (SELECT QC_First_Name + ' ' + QC_Last_Name AS Expr1
+                       FROM      ISI_Quality_Check AS q
+                       WHERE   (ISI_Document.QC_Inspector = QC_ID)) AS QC_InspectorName, ISI_Document.LG_Inspector,
+                      (SELECT QC_First_Name + ' ' + QC_Last_Name AS Expr1
+                       FROM      ISI_Quality_Check AS q
+                       WHERE   (ISI_Document.LG_Inspector = QC_ID)) AS LG_InspectorName, ISI_Document.Approved_Inspector,
+                      (SELECT QC_First_Name + ' ' + QC_Last_Name AS Expr1
+                       FROM      ISI_Quality_Check AS q
+                       WHERE   (ISI_Document.Approved_Inspector = QC_ID)) AS ApprovedName, ISI_Incoming.Trn_Ticket AS Tck_No, ISI_Incoming.Trn_PO AS PO, ISI_Incoming.Trn_Truck_Id AS Truck_No, ISI_Incoming.Trn_Date, 
+                  ISI_Incoming.Trn_Deduct_QC, ISI_Incoming.Trn_Weight_IN, ISI_Incoming.Trn_Deduct_LG, ISI_Incoming.Trn_Weight_IN_Time, ISI_Incoming.Trn_Weight_OUT, ISI_Incoming.Trn_Weight_OUT_Time, ISI_Incoming.Trn_Weight_Net_, 
+                  ISI_Incoming.Inspector_Approved,
+                      (SELECT QC_First_Name + ' ' + QC_Last_Name AS Expr1
+                       FROM      ISI_Quality_Check AS q
+                       WHERE   (ISI_Incoming.Inspector_Approved = QC_ID)) AS Inspector_ApprovedName, ISI_Incoming.Trn_Weight_Net_Time, ISI_Incoming.Inspector_Approved_Date, ISI_Incoming.Approved__Flag, ISI_QC_Status.Status_Desc, 
+                  ISI_QC_Status.Status_ID, ISI_QC_Status.Status_Remark, ISI_Material.Mat_Code, ISI_Material.Mat_Desc, ISI_Supplier.SUp_Desc, 0 AS In_Def_Weigth_Kg, '' AS Defect
+FROM     ISI_Document INNER JOIN
+                  ISI_Incoming ON ISI_Document.Doc_ID = ISI_Incoming.Doc_ID INNER JOIN
+                  ISI_QC_Status ON ISI_Incoming.Status_ID = ISI_QC_Status.Status_ID LEFT OUTER JOIN
+                  ISI_Material ON ISI_Incoming.Mat_Id = ISI_Material.Mat_ID LEFT OUTER JOIN
+                  ISI_Supplier ON ISI_Incoming.Sup_ID = ISI_Supplier.Sup_ID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Doc_ID" DataSetColumn="Doc_ID" />
+              <Mapping SourceColumn="QC_Inspector" DataSetColumn="QC_Inspector" />
+              <Mapping SourceColumn="QC_InspectorName" DataSetColumn="QC_InspectorName" />
+              <Mapping SourceColumn="LG_Inspector" DataSetColumn="LG_Inspector" />
+              <Mapping SourceColumn="LG_InspectorName" DataSetColumn="LG_InspectorName" />
+              <Mapping SourceColumn="Approved_Inspector" DataSetColumn="Approved_Inspector" />
+              <Mapping SourceColumn="ApprovedName" DataSetColumn="ApprovedName" />
+              <Mapping SourceColumn="Tck_No" DataSetColumn="Tck_No" />
+              <Mapping SourceColumn="PO" DataSetColumn="PO" />
+              <Mapping SourceColumn="Truck_No" DataSetColumn="Truck_No" />
+              <Mapping SourceColumn="Trn_Date" DataSetColumn="Trn_Date" />
+              <Mapping SourceColumn="Trn_Deduct_QC" DataSetColumn="Trn_Deduct_QC" />
+              <Mapping SourceColumn="Trn_Deduct_LG" DataSetColumn="Trn_Deduct_LG" />
+              <Mapping SourceColumn="Trn_Weight_IN" DataSetColumn="Trn_Weight_IN" />
+              <Mapping SourceColumn="Trn_Weight_IN_Time" DataSetColumn="Trn_Weight_IN_Time" />
+              <Mapping SourceColumn="Trn_Weight_OUT" DataSetColumn="Trn_Weight_OUT" />
+              <Mapping SourceColumn="Trn_Weight_OUT_Time" DataSetColumn="Trn_Weight_OUT_Time" />
+              <Mapping SourceColumn="Inspector_Approved" DataSetColumn="Inspector_Approved" />
+              <Mapping SourceColumn="Inspector_ApprovedName" DataSetColumn="Inspector_ApprovedName" />
+              <Mapping SourceColumn="Trn_Weight_Net_Time" DataSetColumn="Trn_Weight_Net_Time" />
+              <Mapping SourceColumn="Inspector_Approved_Date" DataSetColumn="Inspector_Approved_Date" />
+              <Mapping SourceColumn="Status_Desc" DataSetColumn="Status_Desc" />
+              <Mapping SourceColumn="Status_ID" DataSetColumn="Status_ID" />
+              <Mapping SourceColumn="Status_Remark" DataSetColumn="Status_Remark" />
+              <Mapping SourceColumn="Mat_Code" DataSetColumn="Mat_Code" />
+              <Mapping SourceColumn="Mat_Desc" DataSetColumn="Mat_Desc" />
+              <Mapping SourceColumn="Doc_Date" DataSetColumn="Doc_Date" />
+              <Mapping SourceColumn="Approved__Flag" DataSetColumn="Approved__Flag" />
+              <Mapping SourceColumn="SUp_Desc" DataSetColumn="SUp_Desc" />
+              <Mapping SourceColumn="In_Def_Weigth_Kg" DataSetColumn="In_Def_Weigth_Kg" />
+              <Mapping SourceColumn="Defect" DataSetColumn="Defect" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet" msprop:Generator_UserDSName="DataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTableISI" msprop:Generator_TableClassName="DataTableISIDataTable" msprop:Generator_TableVarName="tableDataTableISI" msprop:Generator_TablePropName="DataTableISI" msprop:Generator_RowDeletingName="DataTableISIRowDeleting" msprop:Generator_RowChangingName="DataTableISIRowChanging" msprop:Generator_RowEvHandlerName="DataTableISIRowChangeEventHandler" msprop:Generator_RowDeletedName="DataTableISIRowDeleted" msprop:Generator_UserTableName="DataTableISI" msprop:Generator_RowChangedName="DataTableISIRowChanged" msprop:Generator_RowEvArgName="DataTableISIRowChangeEvent" msprop:Generator_RowClassName="DataTableISIRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Doc_ID" msprop:Generator_ColumnVarNameInTable="columnDoc_ID" msprop:Generator_ColumnPropNameInRow="Doc_ID" msprop:Generator_ColumnPropNameInTable="Doc_IDColumn" msprop:Generator_UserColumnName="Doc_ID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QC_Inspector" msprop:Generator_ColumnVarNameInTable="columnQC_Inspector" msprop:Generator_ColumnPropNameInRow="QC_Inspector" msprop:Generator_ColumnPropNameInTable="QC_InspectorColumn" msprop:Generator_UserColumnName="QC_Inspector" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QC_InspectorName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnQC_InspectorName" msprop:Generator_ColumnPropNameInRow="QC_InspectorName" msprop:Generator_ColumnPropNameInTable="QC_InspectorNameColumn" msprop:Generator_UserColumnName="QC_InspectorName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="151" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LG_Inspector" msprop:Generator_ColumnVarNameInTable="columnLG_Inspector" msprop:Generator_ColumnPropNameInRow="LG_Inspector" msprop:Generator_ColumnPropNameInTable="LG_InspectorColumn" msprop:Generator_UserColumnName="LG_Inspector" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LG_InspectorName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLG_InspectorName" msprop:Generator_ColumnPropNameInRow="LG_InspectorName" msprop:Generator_ColumnPropNameInTable="LG_InspectorNameColumn" msprop:Generator_UserColumnName="LG_InspectorName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="151" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Approved_Inspector" msprop:Generator_ColumnVarNameInTable="columnApproved_Inspector" msprop:Generator_ColumnPropNameInRow="Approved_Inspector" msprop:Generator_ColumnPropNameInTable="Approved_InspectorColumn" msprop:Generator_UserColumnName="Approved_Inspector" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ApprovedName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnApprovedName" msprop:Generator_ColumnPropNameInRow="ApprovedName" msprop:Generator_ColumnPropNameInTable="ApprovedNameColumn" msprop:Generator_UserColumnName="ApprovedName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="151" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tck_No" msprop:Generator_ColumnVarNameInTable="columnTck_No" msprop:Generator_ColumnPropNameInRow="Tck_No" msprop:Generator_ColumnPropNameInTable="Tck_NoColumn" msprop:Generator_UserColumnName="Tck_No">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PO" msprop:Generator_ColumnVarNameInTable="columnPO" msprop:Generator_ColumnPropNameInRow="PO" msprop:Generator_ColumnPropNameInTable="POColumn" msprop:Generator_UserColumnName="PO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Truck_No" msprop:Generator_ColumnVarNameInTable="columnTruck_No" msprop:Generator_ColumnPropNameInRow="Truck_No" msprop:Generator_ColumnPropNameInTable="Truck_NoColumn" msprop:Generator_UserColumnName="Truck_No" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Trn_Date" msprop:Generator_ColumnVarNameInTable="columnTrn_Date" msprop:Generator_ColumnPropNameInRow="Trn_Date" msprop:Generator_ColumnPropNameInTable="Trn_DateColumn" msprop:Generator_UserColumnName="Trn_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Trn_Deduct_QC" msprop:Generator_ColumnVarNameInTable="columnTrn_Deduct_QC" msprop:Generator_ColumnPropNameInRow="Trn_Deduct_QC" msprop:Generator_ColumnPropNameInTable="Trn_Deduct_QCColumn" msprop:Generator_UserColumnName="Trn_Deduct_QC" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Trn_Deduct_LG" msprop:Generator_ColumnVarNameInTable="columnTrn_Deduct_LG" msprop:Generator_ColumnPropNameInRow="Trn_Deduct_LG" msprop:Generator_ColumnPropNameInTable="Trn_Deduct_LGColumn" msprop:Generator_UserColumnName="Trn_Deduct_LG" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Trn_Weight_IN" msprop:Generator_ColumnVarNameInTable="columnTrn_Weight_IN" msprop:Generator_ColumnPropNameInRow="Trn_Weight_IN" msprop:Generator_ColumnPropNameInTable="Trn_Weight_INColumn" msprop:Generator_UserColumnName="Trn_Weight_IN" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Trn_Weight_IN_Time" msprop:Generator_ColumnVarNameInTable="columnTrn_Weight_IN_Time" msprop:Generator_ColumnPropNameInRow="Trn_Weight_IN_Time" msprop:Generator_ColumnPropNameInTable="Trn_Weight_IN_TimeColumn" msprop:Generator_UserColumnName="Trn_Weight_IN_Time" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Trn_Weight_OUT" msprop:Generator_ColumnVarNameInTable="columnTrn_Weight_OUT" msprop:Generator_ColumnPropNameInRow="Trn_Weight_OUT" msprop:Generator_ColumnPropNameInTable="Trn_Weight_OUTColumn" msprop:Generator_UserColumnName="Trn_Weight_OUT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Trn_Weight_OUT_Time" msprop:Generator_ColumnVarNameInTable="columnTrn_Weight_OUT_Time" msprop:Generator_ColumnPropNameInRow="Trn_Weight_OUT_Time" msprop:Generator_ColumnPropNameInTable="Trn_Weight_OUT_TimeColumn" msprop:Generator_UserColumnName="Trn_Weight_OUT_Time" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Inspector_Approved" msprop:Generator_ColumnVarNameInTable="columnInspector_Approved" msprop:Generator_ColumnPropNameInRow="Inspector_Approved" msprop:Generator_ColumnPropNameInTable="Inspector_ApprovedColumn" msprop:Generator_UserColumnName="Inspector_Approved" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Inspector_ApprovedName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnInspector_ApprovedName" msprop:Generator_ColumnPropNameInRow="Inspector_ApprovedName" msprop:Generator_ColumnPropNameInTable="Inspector_ApprovedNameColumn" msprop:Generator_UserColumnName="Inspector_ApprovedName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="151" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Trn_Weight_Net_Time" msprop:Generator_ColumnVarNameInTable="columnTrn_Weight_Net_Time" msprop:Generator_ColumnPropNameInRow="Trn_Weight_Net_Time" msprop:Generator_ColumnPropNameInTable="Trn_Weight_Net_TimeColumn" msprop:Generator_UserColumnName="Trn_Weight_Net_Time" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Inspector_Approved_Date" msprop:Generator_ColumnVarNameInTable="columnInspector_Approved_Date" msprop:Generator_ColumnPropNameInRow="Inspector_Approved_Date" msprop:Generator_ColumnPropNameInTable="Inspector_Approved_DateColumn" msprop:Generator_UserColumnName="Inspector_Approved_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Status_Desc" msprop:Generator_ColumnVarNameInTable="columnStatus_Desc" msprop:Generator_ColumnPropNameInRow="Status_Desc" msprop:Generator_ColumnPropNameInTable="Status_DescColumn" msprop:Generator_UserColumnName="Status_Desc" type="xs:string" minOccurs="0" />
+              <xs:element name="Status_ID" msprop:Generator_ColumnVarNameInTable="columnStatus_ID" msprop:Generator_ColumnPropNameInRow="Status_ID" msprop:Generator_ColumnPropNameInTable="Status_IDColumn" msprop:Generator_UserColumnName="Status_ID" type="xs:int" />
+              <xs:element name="Status_Remark" msprop:Generator_ColumnVarNameInTable="columnStatus_Remark" msprop:Generator_ColumnPropNameInRow="Status_Remark" msprop:Generator_ColumnPropNameInTable="Status_RemarkColumn" msprop:Generator_UserColumnName="Status_Remark" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Mat_Code" msprop:Generator_ColumnVarNameInTable="columnMat_Code" msprop:Generator_ColumnPropNameInRow="Mat_Code" msprop:Generator_ColumnPropNameInTable="Mat_CodeColumn" msprop:Generator_UserColumnName="Mat_Code" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Mat_Desc" msprop:Generator_ColumnVarNameInTable="columnMat_Desc" msprop:Generator_ColumnPropNameInRow="Mat_Desc" msprop:Generator_ColumnPropNameInTable="Mat_DescColumn" msprop:Generator_UserColumnName="Mat_Desc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Doc_Date" msprop:Generator_ColumnVarNameInTable="columnDoc_Date" msprop:Generator_ColumnPropNameInRow="Doc_Date" msprop:Generator_ColumnPropNameInTable="Doc_DateColumn" msprop:Generator_UserColumnName="Doc_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Approved__Flag" msprop:Generator_ColumnVarNameInTable="columnApproved__Flag" msprop:Generator_ColumnPropNameInRow="Approved__Flag" msprop:Generator_ColumnPropNameInTable="Approved__FlagColumn" msprop:Generator_UserColumnName="Approved__Flag" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SUp_Desc" msprop:Generator_ColumnVarNameInTable="columnSUp_Desc" msprop:Generator_ColumnPropNameInRow="SUp_Desc" msprop:Generator_ColumnPropNameInTable="SUp_DescColumn" msprop:Generator_UserColumnName="SUp_Desc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="In_Def_Weigth_Kg" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnIn_Def_Weigth_Kg" msprop:Generator_ColumnPropNameInRow="In_Def_Weigth_Kg" msprop:Generator_ColumnPropNameInTable="In_Def_Weigth_KgColumn" msprop:Generator_UserColumnName="In_Def_Weigth_Kg" type="xs:int" minOccurs="0" />
+              <xs:element name="Defect" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDefect" msprop:Generator_ColumnPropNameInRow="Defect" msprop:Generator_ColumnPropNameInTable="DefectColumn" msprop:Generator_UserColumnName="Defect" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Pic_Path" msprop:Generator_ColumnVarNameInTable="columnPic_Path" msprop:Generator_ColumnPropNameInRow="Pic_Path" msprop:Generator_ColumnPropNameInTable="Pic_PathColumn" msprop:Generator_UserColumnName="Pic_Path" type="xs:string" minOccurs="0" />
+              <xs:element name="Trn_Weight_Net_" msprop:Generator_ColumnVarNameInTable="columnTrn_Weight_Net_" msprop:Generator_ColumnPropNameInRow="Trn_Weight_Net_" msprop:Generator_ColumnPropNameInTable="Trn_Weight_Net_Column" msprop:Generator_UserColumnName="Trn_Weight_Net_" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ISI_Picture" msprop:Generator_TableClassName="ISI_PictureDataTable" msprop:Generator_TableVarName="tableISI_Picture" msprop:Generator_TablePropName="ISI_Picture" msprop:Generator_RowDeletingName="ISI_PictureRowDeleting" msprop:Generator_RowChangingName="ISI_PictureRowChanging" msprop:Generator_RowEvHandlerName="ISI_PictureRowChangeEventHandler" msprop:Generator_RowDeletedName="ISI_PictureRowDeleted" msprop:Generator_UserTableName="ISI_Picture" msprop:Generator_RowChangedName="ISI_PictureRowChanged" msprop:Generator_RowEvArgName="ISI_PictureRowChangeEvent" msprop:Generator_RowClassName="ISI_PictureRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Doc_ID" msprop:Generator_ColumnVarNameInTable="columnDoc_ID" msprop:Generator_ColumnPropNameInRow="Doc_ID" msprop:Generator_ColumnPropNameInTable="Doc_IDColumn" msprop:Generator_UserColumnName="Doc_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="Tck_no" msprop:Generator_ColumnVarNameInTable="columnTck_no" msprop:Generator_ColumnPropNameInRow="Tck_no" msprop:Generator_ColumnPropNameInTable="Tck_noColumn" msprop:Generator_UserColumnName="Tck_no" type="xs:string" minOccurs="0" />
+              <xs:element name="Pic_path" msprop:Generator_ColumnVarNameInTable="columnPic_path" msprop:Generator_ColumnPropNameInRow="Pic_path" msprop:Generator_ColumnPropNameInTable="Pic_pathColumn" msprop:Generator_UserColumnName="Pic_path" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="DataTableISI_ISI_Picture" msdata:parent="DataTableISI" msdata:child="ISI_Picture" msdata:parentkey="Doc_ID" msdata:childkey="Doc_ID" msprop:Generator_UserChildTable="ISI_Picture" msprop:Generator_ChildPropName="GetISI_PictureRows" msprop:Generator_UserRelationName="DataTableISI_ISI_Picture" msprop:Generator_RelationVarName="relationDataTableISI_ISI_Picture" msprop:Generator_UserParentTable="DataTableISI" msprop:Generator_ParentPropName="DataTableISIRow" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet5" targetNamespace="http://tempuri.org/DataSet5.xsd" xmlns:mstns="http://tempuri.org/DataSet5.xsd" xmlns="http://tempuri.org/DataSet5.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ISI.Report.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTableISO!TableAdapter" GeneratorDataComponentClassName="DataTableISO_TableAdapter" Name="DataTableISO!" UserDataComponentName="DataTableISO!TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT TOP (1000) ISO_ID, ISO_Desc, ISO_TCODE, ISO_NO, ISO_Issused_Date, ISO_Effective_Date
+FROM     ISIDB.dbo.ISI_ISO</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ISO_ID" DataSetColumn="ISO_ID" />
+              <Mapping SourceColumn="ISO_Desc" DataSetColumn="ISO_Desc" />
+              <Mapping SourceColumn="ISO_TCODE" DataSetColumn="ISO_TCODE" />
+              <Mapping SourceColumn="ISO_NO" DataSetColumn="ISO_NO" />
+              <Mapping SourceColumn="ISO_Issused_Date" DataSetColumn="ISO_Issused_Date" />
+              <Mapping SourceColumn="ISO_Effective_Date" DataSetColumn="ISO_Effective_Date" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet5" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet5" msprop:Generator_UserDSName="DataSet5">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTableISO_x0021_" msprop:Generator_TableClassName="_DataTableISO_DataTable" msprop:Generator_TableVarName="_tableDataTableISO_" msprop:Generator_TablePropName="_DataTableISO_" msprop:Generator_RowDeletingName="_DataTableISO_RowDeleting" msprop:Generator_RowChangingName="_DataTableISO_RowChanging" msprop:Generator_RowEvHandlerName="_DataTableISO_RowChangeEventHandler" msprop:Generator_RowDeletedName="_DataTableISO_RowDeleted" msprop:Generator_UserTableName="DataTableISO!" msprop:Generator_RowChangedName="_DataTableISO_RowChanged" msprop:Generator_RowEvArgName="_DataTableISO_RowChangeEvent" msprop:Generator_RowClassName="_DataTableISO_Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ISO_ID" msprop:Generator_ColumnVarNameInTable="columnISO_ID" msprop:Generator_ColumnPropNameInRow="ISO_ID" msprop:Generator_ColumnPropNameInTable="ISO_IDColumn" msprop:Generator_UserColumnName="ISO_ID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ISO_Desc" msprop:Generator_ColumnVarNameInTable="columnISO_Desc" msprop:Generator_ColumnPropNameInRow="ISO_Desc" msprop:Generator_ColumnPropNameInTable="ISO_DescColumn" msprop:Generator_UserColumnName="ISO_Desc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ISO_TCODE" msprop:Generator_ColumnVarNameInTable="columnISO_TCODE" msprop:Generator_ColumnPropNameInRow="ISO_TCODE" msprop:Generator_ColumnPropNameInTable="ISO_TCODEColumn" msprop:Generator_UserColumnName="ISO_TCODE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ISO_NO" msprop:Generator_ColumnVarNameInTable="columnISO_NO" msprop:Generator_ColumnPropNameInRow="ISO_NO" msprop:Generator_ColumnPropNameInTable="ISO_NOColumn" msprop:Generator_UserColumnName="ISO_NO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ISO_Issused_Date" msprop:Generator_ColumnVarNameInTable="columnISO_Issused_Date" msprop:Generator_ColumnPropNameInRow="ISO_Issused_Date" msprop:Generator_ColumnPropNameInTable="ISO_Issused_DateColumn" msprop:Generator_UserColumnName="ISO_Issused_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ISO_Effective_Date" msprop:Generator_ColumnVarNameInTable="columnISO_Effective_Date" msprop:Generator_ColumnPropNameInRow="ISO_Effective_Date" msprop:Generator_ColumnPropNameInTable="ISO_Effective_DateColumn" msprop:Generator_UserColumnName="ISO_Effective_Date" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

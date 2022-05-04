@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet3" targetNamespace="http://tempuri.org/DataSet3.xsd" xmlns:mstns="http://tempuri.org/DataSet3.xsd" xmlns="http://tempuri.org/DataSet3.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ISI.Report.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTableMATTableAdapter" GeneratorDataComponentClassName="DataTableMATTableAdapter" Name="DataTableMAT" UserDataComponentName="DataTableMATTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT TOP (1000) Mat_ID, Mat_Desc, Mat_Code, Mat_Updated_Time
+FROM     ISIDB.dbo.ISI_Material</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Mat_ID" DataSetColumn="Mat_ID" />
+              <Mapping SourceColumn="Mat_Desc" DataSetColumn="Mat_Desc" />
+              <Mapping SourceColumn="Mat_Code" DataSetColumn="Mat_Code" />
+              <Mapping SourceColumn="Mat_Updated_Time" DataSetColumn="Mat_Updated_Time" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet3" msprop:Generator_UserDSName="DataSet3">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTableMAT" msprop:Generator_TableClassName="DataTableMATDataTable" msprop:Generator_TableVarName="tableDataTableMAT" msprop:Generator_TablePropName="DataTableMAT" msprop:Generator_RowDeletingName="DataTableMATRowDeleting" msprop:Generator_RowChangingName="DataTableMATRowChanging" msprop:Generator_RowEvHandlerName="DataTableMATRowChangeEventHandler" msprop:Generator_RowDeletedName="DataTableMATRowDeleted" msprop:Generator_UserTableName="DataTableMAT" msprop:Generator_RowChangedName="DataTableMATRowChanged" msprop:Generator_RowEvArgName="DataTableMATRowChangeEvent" msprop:Generator_RowClassName="DataTableMATRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Mat_ID" msprop:Generator_ColumnVarNameInTable="columnMat_ID" msprop:Generator_ColumnPropNameInRow="Mat_ID" msprop:Generator_ColumnPropNameInTable="Mat_IDColumn" msprop:Generator_UserColumnName="Mat_ID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Mat_Desc" msprop:Generator_ColumnVarNameInTable="columnMat_Desc" msprop:Generator_ColumnPropNameInRow="Mat_Desc" msprop:Generator_ColumnPropNameInTable="Mat_DescColumn" msprop:Generator_UserColumnName="Mat_Desc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Mat_Code" msprop:Generator_ColumnVarNameInTable="columnMat_Code" msprop:Generator_ColumnPropNameInRow="Mat_Code" msprop:Generator_ColumnPropNameInTable="Mat_CodeColumn" msprop:Generator_UserColumnName="Mat_Code" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Mat_Updated_Time" msprop:Generator_ColumnVarNameInTable="columnMat_Updated_Time" msprop:Generator_ColumnPropNameInRow="Mat_Updated_Time" msprop:Generator_ColumnPropNameInTable="Mat_Updated_TimeColumn" msprop:Generator_UserColumnName="Mat_Updated_Time" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTableMAT" />
+      <xs:field xpath="mstns:Mat_ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

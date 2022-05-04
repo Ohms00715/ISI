@@ -1,0 +1,10 @@
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Maneger\bin\Debug\ISI.Maneger.dll.config
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Maneger\bin\Debug\ISI.Maneger.dll
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Maneger\bin\Debug\ISI.Maneger.pdb
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Maneger\bin\Debug\ISI.Data.dll
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Maneger\bin\Debug\ISI.Data.pdb
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Maneger\obj\x86\Debug\ISI.Maneger.csprojResolveAssemblyReference.cache
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Maneger\obj\x86\Debug\ISI.Maneger.Properties.Resources.resources
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Maneger\obj\x86\Debug\ISI.Maneger.csproj.GenerateResource.Cache
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Maneger\obj\x86\Debug\ISI.Maneger.dll
+D:\Project\ISI\ISI.Main.2010\ISI.Test\ISI.Maneger\obj\x86\Debug\ISI.Maneger.pdb

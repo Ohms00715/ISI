@@ -1,0 +1,686 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FA807721-9224-41FC-9390-022D965A7562}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ISI.Window</RootNamespace>
+    <AssemblyName>ISI.Window</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ISI.Test\Service References\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ISI.Test\Service References\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ISI.Test\Service References\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ISI.Test\Service References\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="GroupDocs.Conversion">
+      <HintPath>C:\Users\ROG\Desktop\C#\lib\net20\GroupDocs.Conversion.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AD401ID_Password_Management_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AD401ID_Password_Management_Form.Designer.cs">
+      <DependentUpon>AD401ID_Password_Management_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ad402Form_Management_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ad402Form_Management_Form.Designer.cs">
+      <DependentUpon>Ad402Form_Management_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AD403Authorized_Management_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AD403Authorized_Management_Form.Designer.cs">
+      <DependentUpon>AD403Authorized_Management_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Copy of TRN201Incoming_Scrap_InspectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Copy of TRN201Incoming_Scrap_InspectionForm.Designer.cs">
+      <DependentUpon>Copy of TRN201Incoming_Scrap_InspectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DocumentListForm.Designer.cs">
+      <DependentUpon>DocumentListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAS000RegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAS000RegisterForm.Designer.cs">
+      <DependentUpon>MAS000RegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAS100LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAS100LoginForm.Designer.cs">
+      <DependentUpon>MAS100LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REP107Incoming_Scrap_InspectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="REP107Incoming_Scrap_InspectionForm.Designer.cs">
+      <DependentUpon>REP107Incoming_Scrap_InspectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="REP102MaterialForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="REP102MaterialForm.Designer.cs">
+      <DependentUpon>REP102MaterialForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REP101SuppilerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="REP101SuppilerForm.Designer.cs">
+      <DependentUpon>REP101SuppilerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REP103Quality_CheckForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="REP103Quality_CheckForm.Designer.cs">
+      <DependentUpon>REP103Quality_CheckForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REP104DefectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="REP104DefectForm.Designer.cs">
+      <DependentUpon>REP104DefectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REP105ISOForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="REP105ISOForm.Designer.cs">
+      <DependentUpon>REP105ISOForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="REP106Quality_Control_StatusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="REP106Quality_Control_StatusForm.Designer.cs">
+      <DependentUpon>REP106Quality_Control_StatusForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportViewForm.Designer.cs">
+      <DependentUpon>ReportViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TRN201Incoming_Scrap_InspectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TRN201Incoming_Scrap_InspectionForm.Designer.cs">
+      <DependentUpon>TRN201Incoming_Scrap_InspectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAS102MaterialForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAS102MaterialForm.Designer.cs">
+      <DependentUpon>MAS102MaterialForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAS101SuppilerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAS101SuppilerForm.Designer.cs">
+      <DependentUpon>MAS101SuppilerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAS103Quality CheckForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAS103Quality CheckForm.Designer.cs">
+      <DependentUpon>MAS103Quality CheckForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAS104DefectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAS104DefectForm.Designer.cs">
+      <DependentUpon>MAS104DefectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAS105ISOFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAS105ISOFrom.Designer.cs">
+      <DependentUpon>MAS105ISOFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAS106Quality_Control_StatusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAS106Quality_Control_StatusForm.Designer.cs">
+      <DependentUpon>MAS106Quality_Control_StatusForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIForm.Designer.cs">
+      <DependentUpon>MDIForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UCBottom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCBottom.Designer.cs">
+      <DependentUpon>UCBottom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCPagecs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCPagecs.Designer.cs">
+      <DependentUpon>UCPagecs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCTopl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTopl1.Designer.cs">
+      <DependentUpon>UCTopl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserViewForm.Designer.cs">
+      <DependentUpon>UserViewForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AD401ID_Password_Management_Form.resx">
+      <DependentUpon>AD401ID_Password_Management_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ad402Form_Management_Form.resx">
+      <DependentUpon>Ad402Form_Management_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AD403Authorized_Management_Form.resx">
+      <DependentUpon>AD403Authorized_Management_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Copy of TRN201Incoming_Scrap_InspectionForm.resx">
+      <DependentUpon>Copy of TRN201Incoming_Scrap_InspectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocumentListForm.resx">
+      <DependentUpon>DocumentListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAS000RegisterForm.resx">
+      <DependentUpon>MAS000RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAS100LoginForm.resx">
+      <DependentUpon>MAS100LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REP107Incoming_Scrap_InspectionForm.resx">
+      <DependentUpon>REP107Incoming_Scrap_InspectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REP101SuppilerForm.resx">
+      <DependentUpon>REP101SuppilerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REP102MaterialForm.resx">
+      <DependentUpon>REP102MaterialForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REP103Quality_CheckForm.resx">
+      <DependentUpon>REP103Quality_CheckForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REP104DefectForm.resx">
+      <DependentUpon>REP104DefectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REP105ISOForm.resx">
+      <DependentUpon>REP105ISOForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REP106Quality_Control_StatusForm.resx">
+      <DependentUpon>REP106Quality_Control_StatusForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportISICHT.rdlc" />
+    <EmbeddedResource Include="ReportISI.rdlc" />
+    <EmbeddedResource Include="ReportSUP.rdlc" />
+    <EmbeddedResource Include="ReportDEF.rdlc" />
+    <EmbeddedResource Include="ReportMAT.rdlc" />
+    <EmbeddedResource Include="ReportQC.rdlc" />
+    <EmbeddedResource Include="ReportISO.rdlc" />
+    <EmbeddedResource Include="ReportSTATUS.rdlc" />
+    <EmbeddedResource Include="ReportViewForm.resx">
+      <DependentUpon>ReportViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TRN201Incoming_Scrap_InspectionForm.resx">
+      <DependentUpon>TRN201Incoming_Scrap_InspectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAS102MaterialForm.resx">
+      <DependentUpon>MAS102MaterialForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAS101SuppilerForm.resx">
+      <DependentUpon>MAS101SuppilerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAS103Quality CheckForm.resx">
+      <DependentUpon>MAS103Quality CheckForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAS104DefectForm.resx">
+      <DependentUpon>MAS104DefectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAS105ISOFrom.resx">
+      <DependentUpon>MAS105ISOFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAS106Quality_Control_StatusForm.resx">
+      <DependentUpon>MAS106Quality_Control_StatusForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIForm.resx">
+      <DependentUpon>MDIForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCBottom.resx">
+      <DependentUpon>UCBottom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCPagecs.resx">
+      <DependentUpon>UCPagecs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCTopl1.resx">
+      <DependentUpon>UCTopl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserViewForm.resx">
+      <DependentUpon>UserViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\DefectListForm.datasource" />
+    <None Include="Properties\DataSources\DocumentListForm.datasource" />
+    <None Include="Properties\DataSources\Form2.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet+DataTableISIDataTable.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet+DataTableISIRow.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet+DataTableISIRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet+DataTableISIRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet1+DefectDataTable.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet1+DefectRow.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet1+DefectRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet1+DefectRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet1+IncommingDataTable.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet1+IncommingRow.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet1+IncommingRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet1+IncommingRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet1+SUP1112DataTable.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet1+SUP1112Row.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet1+SUP1112RowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet1+SUP1112RowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet1+SUP1DataTable.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet1+SUP1Row.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet1+SUP1RowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet1+SUP1RowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet1.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet12.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet1TableAdapters.DefectTableAdapter.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet1TableAdapters.IncommingTableAdapter.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet1TableAdapters.SUP1112TableAdapter.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet1TableAdapters.SUP1TableAdapter.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet1TableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet1TableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet2+DataTableDEFDataTable.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet2+DataTableDEFRow.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet2+DataTableDEFRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet2+DataTableDEFRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet2.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet2TableAdapters.DataTableDEFTableAdapter.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet2TableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet2TableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet3+DataTableMATDataTable.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet3+DataTableMATRow.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet3+DataTableMATRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet3+DataTableMATRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet3.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet3TableAdapters.DataTableMATTableAdapter.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet3TableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet3TableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet4+ISI_Quality_CheckDataTable.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet4+ISI_Quality_CheckRow.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet4+ISI_Quality_CheckRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet4+ISI_Quality_CheckRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet4.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet4TableAdapters.ISI_Quality_CheckTableAdapter.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet4TableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet4TableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet5+ISI_ISODataTable.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet5+ISI_ISORow.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet5+ISI_ISORowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet5+ISI_ISORowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet5+_DataTableISO_DataTable.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet5+_DataTableISO_Row.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet5+_DataTableISO_RowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet5+_DataTableISO_RowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet5.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet5TableAdapters.DataTableISO_TableAdapter.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet5TableAdapters.ISI_ISOTableAdapter.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet5TableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet5TableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet6+ISI_QC_StatusDataTable.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet6+ISI_QC_StatusRow.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet6+ISI_QC_StatusRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet6+ISI_QC_StatusRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet6.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet6TableAdapters.ISI_QC_StatusTableAdapter.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet6TableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSet6TableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetDefect+DataTableDEFDataTable.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetDefect+DataTableDEFRow.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetDefect+DataTableDEFRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetDefect+DataTableDEFRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetDefect.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetISO+_DataTableISO_DataTable.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetISO+_DataTableISO_Row.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetISO+_DataTableISO_RowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetISO+_DataTableISO_RowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetISO.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetMaterial+DataTableMATDataTable.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetMaterial+DataTableMATRow.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetMaterial+DataTableMATRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetMaterial+DataTableMATRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetMaterial.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetQC_Status+ISI_QC_StatusDataTable.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetQC_Status+ISI_QC_StatusRow.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetQC_Status+ISI_QC_StatusRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetQC_Status+ISI_QC_StatusRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetQC_Status.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetQuality_Check+ISI_Quality_CheckDataTable.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetQuality_Check+ISI_Quality_CheckRow.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetQuality_Check+ISI_Quality_CheckRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetQuality_Check+ISI_Quality_CheckRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetQuality_Check.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetSUP+DefectDataTable.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetSUP+DefectRow.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetSUP+DefectRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetSUP+DefectRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetSUP+IncommingDataTable.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetSUP+IncommingRow.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetSUP+IncommingRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetSUP+IncommingRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetSUP+SUP1112DataTable.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetSUP+SUP1112Row.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetSUP+SUP1112RowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetSUP+SUP1112RowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetSUP.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetTableAdapters.DataTableISITableAdapter.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetTest+DataTable1DataTable.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetTest+DataTable1Row.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetTest+DataTable1RowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetTest+DataTable1RowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.DataSetTest.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.dsReport+RPT100DataTable.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.dsReport+RPT100Row.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.dsReport+RPT100RowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.dsReport+RPT100RowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.dsReport.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.dsReportSource+DataTable1DataTable.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.dsReportSource+DataTable1Row.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.dsReportSource+DataTable1RowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.dsReportSource+DataTable1RowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.dsReportSource+DataTable2DataTable.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.dsReportSource+DataTable2Row.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.dsReportSource+DataTable2RowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.dsReportSource+DataTable2RowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.dsReportSource.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.Form1.datasource" />
+    <None Include="Properties\DataSources\ISI.Report.Form2.datasource" />
+    <None Include="Properties\DataSources\ISI.Window.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\ISI.Window.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\MAS101SuppilerForm.datasource" />
+    <None Include="Properties\DataSources\MAS102MaterialForm.datasource" />
+    <None Include="Properties\DataSources\MAS103Quality_CheckForm.datasource" />
+    <None Include="Properties\DataSources\MAS104DefectForm.datasource" />
+    <None Include="Properties\DataSources\MAS105ISOForm.datasource" />
+    <None Include="Properties\DataSources\MAS106Quality_Control_StatusForm.datasource" />
+    <None Include="Properties\DataSources\MDI.datasource" />
+    <None Include="Properties\DataSources\REP101SuppilerForm.datasource" />
+    <None Include="Properties\DataSources\REP102MaterialForm.datasource" />
+    <None Include="Properties\DataSources\REP103Quality_CheckForm.datasource" />
+    <None Include="Properties\DataSources\REP104DefectForm.datasource" />
+    <None Include="Properties\DataSources\REP105ISOForm.datasource" />
+    <None Include="Properties\DataSources\REP106Quality_Control_StatusForm.datasource" />
+    <None Include="Properties\DataSources\TRN201Incoming_Scrap_InspectionForm.datasource" />
+    <None Include="Properties\DataSources\TRN201Incoming_Scrap_InspectionForm2.datasource" />
+    <None Include="Properties\DataSources\UCBottom.datasource" />
+    <None Include="Properties\DataSources\UCPagecs.datasource" />
+    <None Include="Properties\DataSources\UCTopl1.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ISI.Maneger\ISI.Maneger.csproj">
+      <Project>{0B6FE2AC-15CA-429C-942E-E755FA60B1CE}</Project>
+      <Name>ISI.Maneger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ISI.Report\ISI.Report.csproj">
+      <Project>{47737E75-35CB-4613-8175-728723283CCE}</Project>
+      <Name>ISI.Report</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 3.5 SP2</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ดาวน์โหลด.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ดาวน์โหลด %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\computer-icons-clip-art-png-favpng-M070FyPc8TCR8X7L1JpvGcVe3_t.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ISILOGO.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ISILOGO1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ISILOGOUSE.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_001_filter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\00Previewfile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001-copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001-excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001-folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001-funnel_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001power-off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\002-delete-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\003-add24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\003-refresh24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\005-delete-24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\005-remove-24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\009-binocular.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\009-save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\011-clean-24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\999-folder-24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\999-mail-24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\computer-icons-clip-art-png-favpng-M070FyPc8TCR8X7L1JpvGcVe3_t1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Getdata.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImportExcel32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SelectALL.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
